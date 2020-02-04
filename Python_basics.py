@@ -10,7 +10,7 @@ Y = norm.pdf(X, mean, standard_deviation)
 # Plotting basics
 plt.xlabel('Name for X Axis')
 plt.ylabel('Name for Y Axis')
-plt.grid() #Makes grid in the backgrounf
+plt.grid() #Makes grid in the background
 plt.show()
 
 # Displays no of rows and columns from the dataset
