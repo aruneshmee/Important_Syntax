@@ -16,7 +16,7 @@ plt.show()
 # Displays no of rows and columns from the dataset
 df = pd.DataFrame(databyc)
 total_c=len(df.axes[0])
-total_rlen(df.axes[1)
+total_r=len(df.axes[1)
                    
 # Finding thr overlapping area between two bell curves
 m1 = ml[g_1-1]
