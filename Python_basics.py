@@ -57,3 +57,19 @@ class Dog():
     # Operation/actions
     def bark(self, number):
         print('Woof my name is {} and num is {}'.format(self.name, number))
+                    
+# Class Example
+import math
+class point():
+    
+    def __init__(self, coord1, coord2):
+        self.coord1 = coord1
+        self.coord2 = coord2
+    
+    def distance(self):
+        d = math.sqrt((self.coord1[0]-self.coord2[0])**2+(self.coord1[1]-self.coord2[1])**2)
+        return d
+    
+    def get_slope(self):
+        s = (self.coord2[1]-self.coord1[1])/(self.coord2[0]-self.coord1[0])
+        return s
