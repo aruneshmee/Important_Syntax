@@ -38,3 +38,22 @@ def solve(m1,m2,std1,std2):
   b = m2/(std2**2) - m1/(std1**2)
   c = m1**2 /(2*std1**2) - m2**2 / (2*std2**2) - np.log(std2/std1)
   return np.roots([a,b,c])
+      
+# Basics of class and its attribute
+class Dog():
+    
+    # Class object attribute
+    # Same for any ind=satnce of class
+    species = 'mammal'
+    
+    def __init__(self, breed, name):
+        
+        # Attributes
+        # We take in argumnet
+        # Assign it using
+        self.breed = breed
+        self.name = name
+        
+    # Operation/actions
+    def bark(self, number):
+        print('Woof my name is {} and num is {}'.format(self.name, number))
