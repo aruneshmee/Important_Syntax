@@ -73,3 +73,12 @@ class point():
     def get_slope(self):
         s = (self.coord2[1]-self.coord1[1])/(self.coord2[0]-self.coord1[0])
         return s
+
+# numpy basics
+import numpy
+n, m, p = map(int,input().split())
+mat = []
+for _ in range(n+m):
+    arr = list(map(int,input().split()))
+    mat.append(arr)
+print(numpy.reshape(mat,(n+m,p)))
