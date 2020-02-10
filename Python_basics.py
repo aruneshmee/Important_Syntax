@@ -1,4 +1,4 @@
-# Mapping into list of integers (Usually required when input contains spaces)
+# Mapping into list of integers (Required when input contains spaces)
 arr = list(map(int,input().split()))
 
 # Taking input as spaces 
