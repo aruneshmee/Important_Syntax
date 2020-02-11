@@ -20,3 +20,15 @@ cv2.waitKey(0)'''
 resized = cv2.resize(image, (200, 200))
 cv2.imshow("Fixed Resizing", resized)
 cv2.waitKey(0)
+
+# Resizing wrt to the aspect ratio
+r = 300.0 / w
+dim = (300, int(h * r))
+resized = cv2.resize(image, dim)
+cv2.imshow("Aspect Ratio Resize", resized)
+cv2.waitKey(0)
+
+# Automated resizing with Imutils
+resized = imutils.resize(image, width=300)
+cv2.imshow('imi resize', resized)
+cv2.waitKey(0)
