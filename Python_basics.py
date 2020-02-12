@@ -38,7 +38,7 @@ def solve(m1,m2,std1,std2):
   b = m2/(std2**2) - m1/(std1**2)
   c = m1**2 /(2*std1**2) - m2**2 / (2*std2**2) - np.log(std2/std1)
   return np.roots([a,b,c])
-      
+
 # Basics of class and its attribute
 class Dog():
     
@@ -82,3 +82,10 @@ for _ in range(n+m):
     arr = list(map(int,input().split()))
     mat.append(arr)
 print(numpy.reshape(mat,(n+m,p)))
+
+# Python Widget basics
+from ipywidgets import interact, interactive, fixed
+import ipywidgets as wid
+def func(x):
+    return x
+interact(func, x='Hello')
