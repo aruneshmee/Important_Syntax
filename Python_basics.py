@@ -4,6 +4,10 @@ arr = list(map(int,input().split()))
 # Taking input as spaces 
 a, b = int(input('Enter: ')).split()
 
+# Splitting alphanumeric string
+import re
+x = re.findall(r"[^\W\d_]+|\d+", "string")
+
 # Making bell curves
 Y = norm.pdf(X, mean, standard_deviation)
 
