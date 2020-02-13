@@ -1,3 +1,4 @@
+# Time conversion from 12 hour to 24 hour format
 import re
 def timeConversion(s):
     x = re.findall(r"[^\W\d_]+|\d+", s)
