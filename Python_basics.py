@@ -11,7 +11,7 @@ x = re.findall(r"[^\W\d_]+|\d+", "string")
 # Making bell curves
 Y = norm.pdf(X, mean, standard_deviation)
 
-# Plotting basics
+# Plotting basics and legend basic
 plt.xlabel('Name for X Axis')
 plt.ylabel('Name for Y Axis')
 plt.grid() #Makes grid in the background
