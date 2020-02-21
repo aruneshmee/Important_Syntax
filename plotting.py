@@ -10,3 +10,4 @@ sns.jointplot(x='total_bill',y='tip',data=tips, kind='reg')
 
 # Graphing evry variable wrt to every other variable
 sns.pairplot(tips)
+sns.pairplot(tips, hue='category') # If categorical data like male or female, 1 or 0, hue can be used to separate with colors
