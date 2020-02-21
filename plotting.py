@@ -7,3 +7,6 @@ sns.distplot(tips['total_bill'], kde=False, bins=30)
 
 #Plotting graph with different featues like adding regression line etc
 sns.jointplot(x='total_bill',y='tip',data=tips, kind='reg')
+
+# Graphing evry variable wrt to every other variable
+sns.pairplot(tips)
