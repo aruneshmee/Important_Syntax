@@ -15,10 +15,11 @@ sns.pairplot(tips, hue='category') # If categorical data like male or female, 1 
 import numpy as np
 sns.barplot(x='sex', y='total_bill', data=tips, estimator=np.std)
 
+# Eg dataset is tips from a hotel
 sns.barplot(x='sex', y='total_bill', data=tips)
-
+# boxplot but with category
 sns.boxplot(x='day',y='total_bill', data=tips, hue='sex')
-
+# More advanced plot
 sns.violinplot(x='day',y='total_bill', data=tips)
-
+# Simialr to scatter plot from matplotlib
 sns.stripplot(x='day', y='total_bill', data=tips)
