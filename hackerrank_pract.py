@@ -16,3 +16,17 @@ for i in ar:
     
 x = max(count, key=count.get)
 print( x)
+
+def miniMaxSum(arr):
+    mins=0
+    maxs=0
+    arr.sort()
+    a = arr.pop(0)
+    for i in arr:
+        maxs += i
+    arr.pop(-1)
+    arr.append(a)
+    arr.sort()
+    for i in arr:
+        mins += i
+    print(mins,maxs)
