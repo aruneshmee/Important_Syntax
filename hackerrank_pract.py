@@ -7,3 +7,12 @@ def divisibleSumPairs(n, k, ar):
                 count+=1
         ar.pop(0)
     return count
+
+from collections import OrderedDict
+count = OrderedDict()
+for i in ar:
+    count.setdefault(i, 0)
+    count[i] += 1
+    
+x = max(count, key=count.get)
+print( x)
