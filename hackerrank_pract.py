@@ -1,3 +1,5 @@
+# HackerRank Algorithms
+
 def divisibleSumPairs(n, k, ar):
     count=0
     for _ in range(0, len(ar)):
@@ -49,3 +51,15 @@ while True:
         print(query,'=',book[query])
     else:
         print('Not found')
+
+ # Count Utopian trees
+ def count(n):
+    growth = 1
+    cycle = 1
+    for _ in range(n):
+        if cycle%2==0:
+            growth+=1
+        else:
+            growth = growth*2
+        cycle +=1
+    return growth
