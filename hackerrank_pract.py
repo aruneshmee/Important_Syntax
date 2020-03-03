@@ -8,6 +8,7 @@ def divisibleSumPairs(n, k, ar):
         ar.pop(0)
     return count
 
+# Ordered Dictionary
 from collections import OrderedDict
 count = OrderedDict()
 for i in ar:
@@ -17,6 +18,7 @@ for i in ar:
 x = max(count, key=count.get)
 print( x)
 
+#Array Manu
 def miniMaxSum(arr):
     mins=0
     maxs=0
@@ -30,3 +32,20 @@ def miniMaxSum(arr):
     for i in arr:
         mins += i
     print(mins,maxs)
+
+# dictionaries and maps
+n = int(input())
+book ={}
+for _ in range(n):
+    item = input().split()
+    book[item[0]]=int(item[1])
+
+while True:
+    try:
+        query = input()
+    except EOFError:
+        break
+    if query in book:
+        print(query,'=',book[query])
+    else:
+        print('Not found')
