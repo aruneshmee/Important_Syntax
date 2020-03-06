@@ -64,7 +64,7 @@ while True:
         cycle +=1
     return growth
 
-# Maximum Hourglass value in a 6x6 array
+# Maximum Hourglass value in a 2-D 6x6 array
 row = 0
 col = 0
 maxx = []
