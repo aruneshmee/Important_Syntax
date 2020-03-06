@@ -63,3 +63,16 @@ while True:
             growth = growth*2
         cycle +=1
     return growth
+
+# Maximum Hourglass value in a 6x6 array
+row = 0
+col = 0
+maxx = []
+for _ in range(4):
+    for _ in range(4):
+        summ = (arr[row][col]+arr[row][col+1]+arr[row][col+2])+arr[row+1][col+1]+(arr[row+2][col]+arr[row+2][col+1]+arr[row+2][col+2])
+        maxx.append(summ)
+        col+=1
+    row+=1
+    col=0
+print(max(maxx))
