@@ -54,8 +54,7 @@ app.layout = html.Div(children = [html.H4(children='US....'),generate_table(df)]
 if __name__=='__main__':
     app.run_server(debug=True)
 
-    
-    
+# Example where a dcc Slider updates a dcc Graph   
 import dash  
 import dash_core_components as dcc 
 import dash_html_components as html 
