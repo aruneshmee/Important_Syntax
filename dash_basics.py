@@ -157,3 +157,30 @@ if __name__ == '__main__':
     app.run_server(debug=True)
 
 
+import dash  
+import dash_core_components as dcc  
+import dash_html_components as html 
+from dash.dependencies import Input, Output
+
+external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.layout = html.Div(
+    [
+        dcc.Input(id='input-l', type='text'),
+        dcc.Input(id='input-2', type='text'),
+        html.Div(id='number-output')
+    ]
+)
+
+@app.callback(
+    Output('number-output', 'children'),
+    [Input('input-l','value'), Input('input-2','value')]
+)
+
+def update_output(input1, input2):
+    return 'input 1 is {} and input 2 is {}'.format(input1, input2)
+
+if __name__=='__main__':
+    app.run_server(debug=True)
