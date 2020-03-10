@@ -118,3 +118,42 @@ def update_figure(select_year):
 
 if __name__=='__main__':
     app.run_server(debug=True)
+
+############################################ Next Program ################################################   
+    
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output, State
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.layout = html.Div(
+    [
+        dcc.Input(id='inp-1', type='text'),
+        dcc.Input(id='inp-2', type='text'),
+        html.Button(id='submit', n_clicks=0, children='submit'),
+        html.Div(id='out')
+    ]
+)
+
+@app.callback(
+    Output('out', 'children'),
+    [Input('submit', 'n_clicks')],
+    [State('inp-1','value'),
+    State('inp-2', 'value')]
+)
+
+def update_output(n_clicks, inp1, inp2):
+    return u'''
+        The Button has been pressed {} times,
+        Input 1 is "{}",
+        and Input 2 is "{}"
+    '''.format(n_clicks, inp1, inp2)
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
+
+
