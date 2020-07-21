@@ -7,6 +7,7 @@ class DynamicArray(object):
         self.capacity = 1
         self.A = self.make_array(self.capacity)
         
+    # Check length
     def __len__(self):
         return self.n
     
@@ -15,7 +16,7 @@ class DynamicArray(object):
             return IndexError('K is out of bounds!')
         
         return self.A[k]
-    
+    #ADD item
     def append(self, ele):
         if self.n == self.capacity:
             self._resize(2*self.capacity) 
