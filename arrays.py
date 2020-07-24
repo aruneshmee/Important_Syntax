@@ -35,3 +35,36 @@ class DynamicArray(object):
         
     def make_array(self, new_cap):
         return (new_cap*ctypes.py_object)()
+    
+def anag(s1,s2):
+    
+    s1 = s1.replace(' ', '').lower()
+    #print(s1)
+    s2 = s2.replace(' ', '').lower()
+    
+    # Edge Case
+    
+    if len(s1) != len(s2):
+        return False
+    
+    count = {}
+    
+    for letter in s1:
+        if letter in count:
+            count[letter] += 1
+        else:
+            count[letter] = 1
+    
+    for letter in s2:
+        if letter in count:
+            count[letter] -=1
+        else:
+            count[letter] = 1
+            
+    print(count)
+    for k in count:
+        print(k)
+        if count[k] != 0:
+            return False
+        
+    return True
