@@ -68,3 +68,21 @@ def anag(s1,s2):
             return False
         
     return True
+
+def pair_sum(arr, num):
+    
+    if len(arr)<2:
+        return ('error')
+    
+    seen = set()
+    output = set()
+    
+    for num in arr:
+        
+        tar = k - num
+        
+        if tar not in seen:
+            seen.add(num)
+        else
+            output.add( )
+    return output
