@@ -18,7 +18,8 @@ class Stack(object):
     
     def size(self):
         return len(self.items)
-    
+  
+# Queue
 class Queue(object):
     
     def __init__(self):
