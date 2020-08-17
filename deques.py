@@ -20,3 +20,7 @@ class Deque(object):
     
     def size(self):
         return len(self.items)
+
+d = Deque()
+d.addfront("hello")
+d.addback("world")
